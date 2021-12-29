@@ -1,0 +1,18 @@
+﻿@model News
+@{
+    ViewData["Title"] = "NEWS";
+}
+
+<div class="text-center">
+    <h1 class="display-4">NEWS</h1>
+    <p>Testing Docker</p>
+</div>
+
+@foreach(var n in Model.NewsList)
+{
+    <h3>@n.Name</h3>
+    @foreach(var p in n.Resource)
+    {
+        <p>@p</p>
+    }
+}
